@@ -1,5 +1,5 @@
 import "./App.css";
-import MakeGrid from "./assets/MakeGrid";
+import MakeGrid from "./MakeGrid";
 
 function App() {
 	return (

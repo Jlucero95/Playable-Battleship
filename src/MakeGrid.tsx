@@ -1,17 +1,5 @@
 import { useState } from "react";
-
-export const RowAndColumnMarkers = [
-	"A",
-	"B",
-	"C",
-	"D",
-	"E",
-	"F",
-	"G",
-	"H",
-	"I",
-	"J",
-];
+import { GridData } from "./GridAndShipData";
 
 export default function MakeGrid() {
 	const [background, setBackground] = useState("");
@@ -19,7 +7,7 @@ export default function MakeGrid() {
 
 	for (let i = 0; i < 10; i++) {
 		for (let j = 0; j < 10; j++) {
-			board.push(`${RowAndColumnMarkers[i]}${j + 1}`);
+			board.push(`${GridData[i]}${j + 1}`);
 		}
 	}
 
