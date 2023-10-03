@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GridData } from "./GridAndShipData";
+import { GridData } from "./GridData.tsx";
 
 export default function MakeGrid() {
 	const [background, setBackground] = useState("");
@@ -19,8 +19,10 @@ export default function MakeGrid() {
 						className={`grid-cell ${background}`}
 						id={cells}
 						key={cells}
-						onClick={() => {
-							setBackground("background-green");
+						onClick={(e) => {
+							if (e.currentTarget.id.includes(`${cells}`))
+								setBackground("background-green");
+							e.stopPropagation;
 						}}
 					>
 						<h1>{cells.slice(0, board.length)}</h1>
