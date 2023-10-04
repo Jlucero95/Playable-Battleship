@@ -1,8 +1,9 @@
-import { useState } from "react";
 import { GridData } from "./GridData.tsx";
+import { FindCellId } from "./FindCellId.tsx";
+import { CheckPlacement } from "./CheckPlacement.tsx";
+import { ships } from "./ShipData.tsx";
 
 export default function MakeGrid() {
-	const [background, setBackground] = useState("");
 	const board: string[] = [];
 
 	for (let i = 0; i < 10; i++) {
@@ -16,13 +17,11 @@ export default function MakeGrid() {
 			{board.map((cells) => {
 				return (
 					<div
-						className={`grid-cell ${background}`}
+						className={"grid-cell"}
 						id={cells}
 						key={cells}
-						onClick={(e) => {
-							if (e.currentTarget.id.includes(`${cells}`))
-								setBackground("background-green");
-							e.stopPropagation;
+						onClick={() => {
+							FindCellId(cells);
 						}}
 					>
 						<h1>{cells.slice(0, board.length)}</h1>
@@ -32,3 +31,5 @@ export default function MakeGrid() {
 		</div>
 	);
 }
+
+CheckPlacement(ships);
