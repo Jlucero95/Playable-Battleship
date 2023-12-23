@@ -1,1 +1,1 @@
-export const hit: string[] = ["hit"];
+export const hit: string[] = [];

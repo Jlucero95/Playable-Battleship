@@ -14,17 +14,17 @@ export default function MakeGrid() {
 
 	return (
 		<div className="grid">
-			{board.map((cells) => {
+			{board.map((cellName) => {
 				return (
-					<div
-						className={"grid-cell"}
-						id={cells}
-						key={cells}
-						onClick={() => {
-							FindCellId(cells);
-						}}
-					>
-						<h1>{cells.slice(0, board.length)}</h1>
+					<div className="outer-grid-cell">
+						<div
+							className={"grid-cell"}
+							id={cellName}
+							key={cellName}
+							onClick={() => {
+								FindCellId(cellName);
+							}}
+						></div>
 					</div>
 				);
 			})}
