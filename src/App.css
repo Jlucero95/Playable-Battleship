@@ -29,13 +29,10 @@ body {
 }
 
 .grid-cell {
-	width: 28px;
-	height: 50%;
-	background-color: lightgray;
-	color: black;
-	border: 2px solid black;
+	width: 22px;
+	height: 51%;
+	background-color: black;
 	border-radius: 28px;
-	font-size: 6px;
 }
 
 .grid-cell h1 {
