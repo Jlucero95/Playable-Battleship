@@ -3,6 +3,8 @@ body {
 }
 
 #root {
+	display: grid;
+	grid-template-columns: auto auto auto;
 	max-width: 1280px;
 	margin: 0 auto;
 	padding: 2rem;
@@ -10,33 +12,61 @@ body {
 	background-color: sandybrown;
 }
 
-.grid {
+.top-numbers,
+.bottom-numbers {
+	grid-column-start: 1;
+	grid-column-end: 4;
 	display: flex;
-	flex-wrap: wrap;
-	width: 641px;
-	border-radius: 5px;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 33px;
+	padding: 0px 86px;
 }
 
-.outer-grid-cell {
+.left-letters {
+	grid-column-start: 1;
+	grid-column-end: 1;
+}
+
+.left-letters,
+.right-letters {
+	display: flex;
+	flex-direction: column;
+	width: 65px;
+	height: 45px;
+}
+
+h3 {
+	margin: 8px;
+}
+
+.game-board {
+	grid-column-start: 2;
+	grid-column-end: 2;
+	display: flex;
+	flex-wrap: wrap;
+	width: 620px;
+	border-radius: 5px;
+}
+.right-letters {
+	grid-column-start: 3;
+	grid-column-end: 3;
+}
+
+.grid-cell-background {
 	width: 60px;
 	height: 42px;
 	background-color: lightgray;
 	color: black;
-	border: 2px solid black;
-	justify-content: center;
-	align-items: center;
-	display: flex;
+	border: 1px solid black;
 }
 
-.grid-cell {
+.hit-or-miss-indicator {
 	width: 22px;
 	height: 51%;
+	margin: 11px auto;
 	background-color: black;
 	border-radius: 28px;
-}
-
-.grid-cell h1 {
-	margin: 0px;
 }
 
 .background-green {

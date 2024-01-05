@@ -13,12 +13,12 @@ export default function MakeGrid() {
 	}
 
 	return (
-		<div className="grid">
+		<div className="game-board">
 			{board.map((cellName) => {
 				return (
-					<div className="outer-grid-cell">
+					<div className="grid-cell-background">
 						<div
-							className={"grid-cell"}
+							className={"hit-or-miss-indicator"}
 							id={cellName}
 							key={cellName}
 							onClick={() => {
