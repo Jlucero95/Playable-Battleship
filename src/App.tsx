@@ -4,6 +4,9 @@ import MakeGrid from "./assets/Components/MakeGrid";
 function App() {
 	return (
 		<>
+			<div className="answer">
+				<p>Answers In Console</p>
+			</div>
 			<div className="top-numbers">
 				<h3>1</h3>
 				<h3>2</h3>

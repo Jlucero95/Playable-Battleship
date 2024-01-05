@@ -40,6 +40,13 @@ h3 {
 	margin: 8px;
 }
 
+.answer {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	font-size: 20px;
+	color: black;
+}
+
 .game-board {
 	grid-column-start: 2;
 	grid-column-end: 2;
